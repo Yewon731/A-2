@@ -1,0 +1,171 @@
+body {
+    margin:0; 
+    text-align:center;
+
+    
+}
+nav {
+    display: flex;
+    background-color:hsl(0, 0%, 100%);
+    height:100px;
+    line-height:100px;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+.CYWnav{
+    width: 98%;
+    background-color:#325397;
+    height: 80px;
+    text-align: center;
+    border-radius: 30px;
+}
+aside {
+    float: left;
+    background-color:#e3e6e3;
+    width:33%;
+    height:1000px;
+    line-height:200px; 
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#MSinline-block{
+    display: inline-block;
+    background-color: white;
+}
+
+section{
+    float:left;
+    background-color:#f9eee8;
+    width:34%;
+    height:1000px;
+    line-height:200px;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.HJsection{
+    width: 98%;
+    background-color:rgb(193, 193, 193);
+    height: 98%;
+    text-align: center;
+    border-radius: 30px;
+}
+article {
+    background-color: #7fafe5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    font-size: 50px;
+    object-fit: cover;
+}
+.SEbanner {
+    width: 98%; /* 너비가 article의 너비에 맞게 조정 */
+    background-color: #0d1218;
+    height: 90%; /* 높이 설정 */
+    text-align: center;
+    border-radius: 30px;
+    overflow: hidden; /* 이미지가 넘치지 않도록 */
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mySlides {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.mySlides.active {
+    display: block;
+    animation: fadeEffect 1.5s;
+}
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 1000;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    z-index: 10;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+/* 페이드 애니메이션 */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
