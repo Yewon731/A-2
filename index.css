@@ -11,15 +11,85 @@ nav {
     line-height:100px;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 20px;
 }
-.CYWnav{
+/* 네비게이션 바 스타일 */
+.CYWnav {
     width: 98%;
-    background-color:#325397;
+    background-color: #325397;
     height: 80px;
-    text-align: center;
+    display: flex;
+    align-items: center;
     border-radius: 30px;
+    padding: 0 20px;
+    color: #fff;
+    gap: 20px;
 }
+
+/* 햄버거 메뉴 아이콘 */
+#hamburger-icon {
+    padding-left: 10px;
+    padding-right: 280px;
+    width: 50px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+/* 검색 입력창 스타일 */
+#search-bar {
+    width: 700px !important;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+/* 링크와 동그라미를 담는 컨테이너 */
+.nav-links {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a:hover {
+    background-color: #4a6bb8;
+}
+
+/* 링크 스타일 */
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+
+
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
+}
+        ul li {
+            display: inline;
+}
+        #handong a{list-style-type: none; padding: 13px; float:right;
+            text-decoration: none;
+            color: #325397;
+}
+       
+         /* 동그라미 스타일 */
+.circle {
+    margin-left: auto;
+    width: 60px;
+    height: 60px;
+    background-color: #abb6ce;
+    border-radius: 50%;
+}
+
 aside {
     float: left;
     background-color:#e3e6e3;
@@ -50,10 +120,20 @@ section{
 }
 .HJsection{
     width: 98%;
-    background-color:rgb(193, 193, 193);
+    background-color:#D9D9D9;
     height: 98%;
     text-align: center;
     border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.HJbox {
+    width: 90%;
+    background-color: #555555; 
+    height: 8%; 
+    text-align: center;
+    border-radius: 30px;
+    margin: 40px auto; 
 }
 article {
     background-color: #7fafe5;
@@ -61,7 +141,7 @@ article {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 300px;
+    height: 600px;
     font-size: 50px;
     object-fit: cover;
 }
@@ -78,19 +158,26 @@ article {
     max-width: 100%;
     position: relative;
     margin: auto;
+    text-align: center;
+    
 }
 
+
+
 .mySlides img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%; /* 이미지의 최대 너비 설정 */
+    max-height: 100%; /* 이미지의 최대 높이 설정 */
+    object-fit: contain; /* 이미지 비율 유지하며 컨테이너에 맞춤 */
 }
 
 .mySlides {
-    display: none;
-    position: relative;
-    width: 100%;
-    height: 100%;
+    display: flex; /* Flexbox 레이아웃 사용 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    width: 100%; /* 부모 요소의 너비에 맞춤 */
+    height: 100%; /* 부모 요소의 높이에 맞춤 */
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
 }
 .mySlides.active {
     display: block;
@@ -163,7 +250,7 @@ article {
     animation-name: fade;
     animation-duration: 1.5s;
 }
-  
+
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
